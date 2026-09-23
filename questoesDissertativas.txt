@@ -1,0 +1,17 @@
+
+Questão 19. Você começa a trabalhar em uma empresa que precisa publicar uma aplicação 
+própria. A equipe quer administrar o sistema operacional e o software instalado, mas deseja evitar 
+a compra de servidores físicos. Em determinadas épocas do ano, o número de usuários cresce 
+muito; no restante do período, a demanda cai. 
+
+R:
+nesse caso a empresa deseja contratar um Iaas, programas como o IWS da Amazon podem fornecer os recursos e a escalabilidade necessaria para um site com demanda variavel, seria então nesse caso necessario haver um gestor acompanhando os recursos necesarios para demanda atual cancelando atributos não que não estiverem sendo utilizados e reduzindo os custos em tempos de baixa
+
+Questão 20. No seu primeiro dia de trabalho, você encontra um servidor Nginx funcionando 
+dentro de um contêiner Docker. A aplicação responde dentro do contêiner, mas um funcionário 
+não consegue acessá-la pela porta escolhida no ambiente. Outro colega afirma que basta ter a 
+imagem nginx:alpine armazenada para que o site funcione. 
+
+primeiramente explicaria q a imagem de um conteiner se trata basicamente apenas da forma como o sistema foi compactado para poder ser instalada, possuir um disco não e suficiente para que musica seja tocada, ele precisa estar funcionando dentro de um leitor, tocador e etc
+seguindo para conferir o problema do amigo rodaria um 'docker images' para descobrir se ele possui a imagem requisitada, havendo uma imagem, usaria o comando 'docker ps' para conferir se ela esta ativa, em caso não esteja usar 'docker run' no sistema requisitado e então um curl http//localhost:'porta ativa' para realizar o serviço requisitado
+
