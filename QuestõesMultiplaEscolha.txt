@@ -1,0 +1,147 @@
+Questão 1. Você ingressa em uma empresa que compra servidores para atender ao movimento 
+de uma campanha anual. Terminada a campanha, grande parte da capacidade permanece sem 
+uso. A diretoria quer disponibilizar recursos conforme a necessidade, sem repetir a compra 
+antecipada de equipamentos. Qual proposta atende ao problema?
+
+C) Utilizar recursos de computação em nuvem que possam ser provisionados conforme a 
+demanda. 
+
+--
+
+Questão 2. Uma empresa contratou uma aplicação de gestão financeira acessada pelo 
+navegador. A equipe utiliza as funcionalidades prontas e não administra o sistema operacional 
+nem desenvolve a aplicação. Ao registrar a contratação, você deve classificá-la como 
+
+A) software como serviço, ou SaaS
+
+--
+
+Questão 3. Você recebe a tarefa de migrar uma aplicação para recursos contratados de um 
+provedor. A empresa quer instalar e administrar o sistema operacional, configurar o servidor web 
+e manter o código da aplicação, sem adquirir o equipamento físico. Qual modelo de serviço 
+corresponde a essa divisão de trabalho? 
+
+E) IaaS, pois fornece infraestrutura virtual para a empresa administrar. 
+
+--
+
+Questão 4. Uma equipe desenvolveu uma aplicação própria e quer publicá-la rapidamente. Ela 
+deseja continuar responsável pelo código, enquanto o provedor administra o ambiente de 
+execução e o sistema operacional subjacente. Qual opção é mais adequada? 
+
+B) PaaS, pois oferece uma plataforma gerenciada para a aplicação. 
+
+--
+
+Questão 5. Uma empresa mantém parte dos sistemas em uma infraestrutura exclusiva, sob seu 
+controle, e utiliza serviços de um provedor público para atender demandas variáveis. Você deve 
+descrever o modelo de implantação utilizado. Trata-se de 
+
+D) nuvem híbrida, pela combinação de recursos privados e públicos. 
+
+--
+
+Questão 6. Uma organização exige que determinada infraestrutura de nuvem seja destinada 
+exclusivamente a ela. A diretoria quer distinguir essa escolha do uso de recursos oferecidos ao 
+público por um provedor externo. Qual modelo atende à exigência? 
+
+A) Nuvem privada. 
+
+--
+
+Questão 7. Você assume o suporte de um escritório que utiliza um sistema hospedado fora da 
+empresa. Durante uma falha no link de Internet, os funcionários não conseguem acessar o 
+sistema. O gestor afirma que serviços em nuvem deveriam funcionar mesmo sem comunicação 
+com o provedor. Qual explicação é correta?
+
+C) O acesso ao serviço remoto depende de conectividade; a continuidade precisa ser planejada. 
+
+--
+
+Questão 8. Uma empresa pretende migrar para a nuvem porque ouviu que “sempre se paga 
+menos”. Você precisa orientar a decisão de forma responsável. Qual medida ajuda a evitar 
+despesas inesperadas? 
+
+E) Acompanhar a utilização dos recursos e as regras de cobrança do serviço contratado. 
+
+--
+
+Questão 9. Uma equipe precisa executar ambientes Linux e Windows isolados sobre o mesmo 
+servidor físico. Você foi chamado para identificar a tecnologia que permitirá criar e administrar 
+esses ambientes. A solução descrita utiliza
+
+B) virtualização por meio de um hypervisor e máquinas virtuais. 
+
+--
+
+Questão 10. Durante a implantação de aplicações, um gerente pergunta por que uma máquina 
+virtual normalmente demanda mais recursos que um contêiner. Qual explicação responde à 
+dúvida? 
+
+D) A máquina virtual possui seu sistema operacional convidado, enquanto contêineres 
+compartilham o kernel do hospedeiro
+
+--
+
+Questão 11. Você encontra uma aplicação que precisa ser executada com suas dependências 
+em mais de um ambiente. A equipe preparou uma imagem Docker e pede que você explique 
+como ela será utilizada. A afirmação correta é 
+
+A) a imagem serve de base para criar uma ou mais instâncias em execução, chamadas 
+contêineres. 
+
+--
+
+Questão 12. Uma empresa executou um contêiner chamado portal usando a imagem 
+nginx:alpine. Um colega encontrou a imagem disponível no ambiente e concluiu que, por isso, 
+a aplicação está necessariamente em execução. Como você deve verificar essa afirmação? 
+
+C) Usar uma verificação dos contêineres em execução, como docker ps. 
+
+--
+
+Questão 13. O Nginx de um contêiner atende na porta 80. A empresa quer acessá-lo pela porta 
+8090 do ambiente de testes. Na execução do contêiner, qual mapeamento atende ao requisito?
+
+E) -p 8090:80, porque a porta do ambiente vem antes da porta interna. 
+
+--
+
+Questão 14. Após publicar um servidor web em um contêiner, você precisa comprovar que ele 
+responde pela porta 8090 do ambiente. Qual ação fornece uma evidência direta da resposta 
+HTTP? 
+
+B) Executar curl http://localhost:8090 e examinar a resposta.
+
+--
+
+Questão 15. A equipe de desenvolvimento concluiu uma demonstração e pede que você libere o 
+ambiente. O contêiner utilizado não será mais necessário. Qual sequência corresponde à limpeza 
+praticada em aula? 
+
+D) Parar o contêiner e depois removê-lo. 
+
+--
+
+Questão 16. Uma empresa precisa iniciar rapidamente várias aplicações isoladas que utilizam 
+bibliotecas diferentes, sem criar um sistema operacional convidado completo para cada uma. 
+Qual alternativa corresponde à necessidade apresentada? 
+
+A) Executar as aplicações em contêineres com as respectivas dependências. 
+
+--
+
+Questão 17. Um gerente afirma que o uso de Docker significa que a empresa “já está 
+automaticamente na nuvem”. Ao apresentar sua análise, você deve esclarecer que
+
+C) Docker executa contêineres, que podem integrar uma solução em nuvem, mas seu uso 
+isolado não define o modelo de implantação. 
+
+--
+
+Questão 18. Uma equipe está decidindo entre executar uma aplicação em uma máquina virtual 
+ou em um contêiner. O requisito determinante é utilizar, para aquela aplicação, um sistema 
+operacional convidado completo e distinto do hospedeiro. Qual decisão atende diretamente ao 
+requisito?
+
+E) Utilizar uma máquina virtual com o sistema operacional convidado necessário.
