@@ -1,0 +1,67 @@
+
+respostas a questões feitas sobre a pratica se encontram apos o registro do terminal
+segue na integra o terminal do Killacoda, em ubunto
+"""
+root@ubuntu:~$ 
+root@ubuntu:~$ vim index.html
+root@ubuntu:~$
+root@ubuntu:~$ cat index.html 
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>Comunicado interno</title> 
+</head> 
+<body> 
+<h1>Comunicado interno disponível</h1> 
+</body> 
+</html>
+root@ubuntu:~$
+root@ubuntu:~$ docker run -d --name comunicado -p 8090:80 nginx:alpine 
+Unable to find image 'nginx:alpine' locally
+alpine: Pulling from library/nginx
+e2de96513ba9: Pull complete 
+d9aae54b5831: Pull complete 
+6c53d0b2a666: Pull complete 
+745dfb2690dd: Pull complete 
+9a9a644fdd6a: Pull complete 
+64c8194480fe: Pull complete 
+e76228b47809: Pull complete 
+e72112c14215: Pull complete 
+Digest: sha256:1ed1b0e1d7652937d6cbdaf4018c7b6fc009a7dd6c3047351e2eddda745de43f
+Status: Downloaded newer image for nginx:alpine
+e4e0af5f65920877fee6e28d80ddf46cf7e726fddfe7ad16ab3b3104bb17602d
+root@ubuntu:~$ 
+root@ubuntu:~$ docker cp index.html comunicado:/usr/share/nginx/html/index.html 
+Successfully copied 2.05kB to comunicado:/usr/share/nginx/html/index.html
+root@ubuntu:~$ 
+root@ubuntu:~$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                     NAMES
+e4e0af5f6592   nginx:alpine   "/docker-entrypoint.…"   2 minutes ago   Up 2 minutes   0.0.0.0:8090->80/tcp, [::]:8090->80/tcp   comunicado
+root@ubuntu:~$ 
+root@ubuntu:~$ curl http://localhost:8090
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>Comunicado interno</title> 
+</head> 
+<body> 
+<h1>Comunicado interno disponível</h1> 
+</body> 
+</html>
+root@ubuntu:~$ 
+
+"""
+
+1. Qual a diferença entre nginx:alpine e o contêiner comunicado? 
+R:a imagem nginx:alpine é basicamente o molde para criação de um conteiner, o conteiner comunicado é esse molde sendo utilizado, preenchido e etc
+
+2. O que significa o mapeamento 8090:80? 
+R: os numeros são a designação da 'porta' entre o sistema operacional e o docker, basta imaginar q ah um tunel entre o hostlocal e o conteiner, o nome desse tunel na maquina local é 8090 e dentro do conteiner esse tunel se chama 80, então vc designa o caminho da comunicação atravez desses numeros, ou basicamente pedindo para q esse 'tunel' seja utilizado
+
+3. Qual saída comprova que a página solicitada respondeu?
+R: o comando curl http://localhost:8090 solicita atividade do conteiner e imprime o resultado comprovando a solicitação
+
+
+
